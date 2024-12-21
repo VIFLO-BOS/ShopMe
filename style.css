@@ -3,3 +3,13 @@ body {
     padding: 0px;
     box-sizing: border-box;
 }
+
+
+
+.visible{
+  display: block;
+  }
+ 
+ .hidden {
+   display: none;
+ }
