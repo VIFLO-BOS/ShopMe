@@ -1,15 +1,44 @@
 body {
-    margin: 0px;
-    padding: 0px;
-    box-sizing: border-box;
+	margin: 0px;
+	padding: 0px;
+	box-sizing: border-box;
+}
+
+#navbar-btn{
+		display: none;
+	}
+
+  .dropdownMenu{
+    display: none;
+  }
+.visible {
+	display: block;
+}
+
+.hidden {
+	display: none;
 }
 
 
 
-.visible{
-  display: block;
+/* this is the section for screen orientation designing code */
+
+@media screen and (min-width: 769px) {
+	 #navbar-btn{
+		display: none;
+	}
+
+  #navbar-content{
+    display: block;
   }
- 
- .hidden {
-   display: none;
- }
+}
+@media screen and (max-width: 768px) {
+	 #navbar-btn{
+		display: block;
+	}
+
+  #navbar-content{
+    display: none;
+  }
+}
+

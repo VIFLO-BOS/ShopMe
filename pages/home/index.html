@@ -28,25 +28,23 @@
     <nav class="navbar navbar-expand-lg bg-body-tertiary">
       <div class="container-fluid">
 
-        <a class="navbar-brand" href="#">ShopMe</a>
 
-        <button class="border" type="button">
-          <span id="open-ico"><i class="fa-solid fa-bars"></i></span>
-          <span class="hidden" id="close-ico"><i class="fa-solid fa-lines-leaning"></i></span>
-        </button>
-
+        <div>
+          <a class="navbar-brand" href="#">BagMe</a>
+        </div>
 
 
         <!-- this is the search bar area -->
+        <div>
+          <form class="d-flex" role="search">
+            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+          </form>
+        </div>
 
-        <form class="d-flex" role="search">
-          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-          
-        </form>
 
         <!-- search bar area ends here -->
 
-        <div class="navbar" id="navbar-content">
+        <div class="navbar-nav" id="navbar-content">
 
           <ul class="navbar-nav me-auto mb-2 mb-lg-0">
             <li class="nav-item">
@@ -59,7 +57,7 @@
                 aria-expanded="false">
                 Shop
               </a>
-              <ul class="dropdown-menu">
+              <ul class="dropdownMenu">
                 <li><a class="dropdown-item" href="#">All products</a></li>
                 <li><a class="dropdown-item" href="#">Categories</a></li>
                 <li>
@@ -86,7 +84,7 @@
                 aria-expanded="false">
                 Account
               </a>
-              <ul class="dropdown-menu">
+              <ul class="dropdownMenu">
                 <li><a class="dropdown-item" href="#">Categories</a></li>
                 <li>
                   <hr class="dropdown-divider">
@@ -94,17 +92,84 @@
                 <li><a class="dropdown-item" href="#">Something else here</a></li>
               </ul>
             </li>
-
-
           </ul>
+
+
+
         </div>
+
+
+        <div class="status">
+          <div class="notify">
+            help
+          </div>
+          <div class="status-profile">
+            <img src="" alt="">lsdfds
+          </div>
+        </div>
+        
+        <div>
+          <button class="border-0 roundered-2" id="navbar-btn" type="button">
+            <span id="open-ico"><i class="fa-solid fa-bars"></i></span>
+            <span class="hidden" id="close-ico"><i class="fa-solid fa-lines-leaning"></i></span>
+          </button>
+        </div>
+      </div>
+
+      <div class="container-fluid id="drop-cont">
+        
+                  <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                      <a class="nav-link" href="#"> &#xF79C; Home</a>
+                    </li>
+                  
+                  
+                    <li class="nav-item dropdown">
+                      <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Shop
+                      </a>
+                      <ul class="dropdownMenu">
+                        <li><a class="dropdown-item" href="#">All products</a></li>
+                        <li><a class="dropdown-item" href="#">Categories</a></li>
+                        <li>
+                          <hr class="dropdown-divider">
+                        </li>
+                        <li><a class="dropdown-item" href="#">Something else here</a></li>
+                      </ul>
+                    </li>
+                  
+                  
+                    <li class="nav-item">
+                      <a class="nav-link" aria-disabled="true">Deals/Offers</a>
+                    </li>
+                  
+                  
+                    <li class="nav-item">
+                      <a class="nav-link" aria-disabled="true">Carts</a>
+                    </li>
+                  
+                  
+                  
+                    <li class="nav-item dropdown">
+                      <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Account
+                      </a>
+                      <ul class="dropdownMenu">
+                        <li><a class="dropdown-item" href="#">Categories</a></li>
+                        <li>
+                          <hr class="dropdown-divider">
+                        </li>
+                        <li><a class="dropdown-item" href="#">Something else here</a></li>
+                      </ul>
+                    </li>
+                  </ul>
       </div>
     </nav>
   </section>
   <!-- NAVBAR SECTION ENDS HERE -->
   <!-- Project -->
   <script src="/ShopMe/style/bootstrap-5.3.3-dist/js/bootstrap.min.js"></script>
-  <script src="/ShopMe/scripts/main.js"></script>
+  <script src="/ShopMe/scripts/navbarScript.js"></script>
 </body>
 
 </html>
