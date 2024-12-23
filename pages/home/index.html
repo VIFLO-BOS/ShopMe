@@ -5,6 +5,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=Edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="shortcut icon" href="/ShopMe/images/logo/favicon.ico" type="image/x-icon">
 
 
   <title>HTML</title>
@@ -25,20 +26,21 @@
 
   <!-- THIS IS THE NAVBAR SECTION -->
   <section>
-    <nav class="navbar navbar-expand-lg  bg-body-tertiary">
+    <nav class="navbar navbar-expand-lg fixed-top bg-body-tertiary" id="nav-parent">
       <div class="container">
 
 
-        <div>
-          <img src="/ShopMe/images/logo/WhatsApp_Image_2024-12-22_at_16.45.43_cdd8b8e2-removebg-preview.png" alt="" width="100px">
-          <a class="navbar-brand" href="#">BagMe</a>
+        <div class="logo">
+          <img src="/ShopMe/images/logo/WhatsApp_Image_2024-12-22_at_16.45.43_cdd8b8e2-removebg-preview.png"
+            alt=""></img>
+          <p><a class="navbar-brand" href="#">BagMe</a></p>
         </div>
 
 
         <!-- this is the search bar area -->
-        <div class="">
-          <form class="d-flex form-control w-100 align-item-center" role="search">
-            <input class="me-2 w-100" type="search" placeholder="Search" aria-label="Search">
+        <div class="w-25">
+          <form class="d-flex search-bar-form w-100 align-items-center" role="search">
+            <input class="me-1 w-100 border-0 " type="search" placeholder="Search" aria-label="Search">
             <i class="fa-solid fa-magnifying-glass"></i>
           </form>
         </div>
@@ -55,11 +57,10 @@
 
 
             <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-                aria-expanded="false">
+              <a class="nav-link dropdown-toggle" href="#" role="button" id="shop-btn" aria-expanded="false">
                 Shop
               </a>
-              <ul class="dropdownMenu">
+              <ul class="dropdown-menu" id="shop-menu">
                 <li><a class="dropdown-item" href="#">All products</a></li>
                 <li><a class="dropdown-item" href="#">Categories</a></li>
                 <li>
@@ -82,11 +83,10 @@
 
 
             <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-                aria-expanded="false">
+              <a class="nav-link dropdown-toggle" href="#" role="button" id="acc-btn" aria-expanded="false">
                 Account
               </a>
-              <ul class="dropdownMenu">
+              <ul class="dropdown-menu" id="acc-menu">
                 <li><a class="dropdown-item" href="#">Categories</a></li>
                 <li>
                   <hr class="dropdown-divider">
@@ -104,14 +104,16 @@
         <div class="status gap-5">
           <div class="notify">
             <i class="fa-solid fa-message"></i>
-            <span><p>0</p></span>
+            <span>
+              <p>0</p>
+            </span>
           </div>
           <div class="status-profile">
             <caption>Bosman</caption>
             <img src="/ShopMe/images/profile/chineseman.jpeg" alt="">
           </div>
         </div>
-        
+
         <div>
           <button class="border-0 roundered-2" id="navbar-btn" type="button">
             <span id="open-ico"><i class="fa-solid fa-bars"></i></span>
@@ -121,56 +123,57 @@
       </div>
 
       <div class="container-fluid" id="drop-cont">
-        
-                  <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                    <li class="nav-item">
-                      <a class="nav-link" href="#"> &#xF79C; Home</a>
-                    </li>
-                  
-                  
-                    <li class="nav-item dropdown">
-                      <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                        Shop
-                      </a>
-                      <ul class="dropdownMenu">
-                        <li><a class="dropdown-item" href="#">All products</a></li>
-                        <li><a class="dropdown-item" href="#">Categories</a></li>
-                        <li>
-                          <hr class="dropdown-divider">
-                        </li>
-                        <li><a class="dropdown-item" href="#">Something else here</a></li>
-                      </ul>
-                    </li>
-                  
-                  
-                    <li class="nav-item">
-                      <a class="nav-link" aria-disabled="true">Deals/Offers</a>
-                    </li>
-                  
-                  
-                    <li class="nav-item">
-                      <a class="nav-link" aria-disabled="true">Carts</a>
-                    </li>
-                  
-                  
-                  
-                    <li class="nav-item dropdown">
-                      <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                        Account
-                      </a>
-                      <ul class="dropdownMenu">
-                        <li><a class="dropdown-item" href="#">Categories</a></li>
-                        <li>
-                          <hr class="dropdown-divider">
-                        </li>
-                        <li><a class="dropdown-item" href="#">Something else here</a></li>
-                      </ul>
-                    </li>
-                  </ul>
+
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link" href="#"> &#xF79C; Home</a>
+          </li>
+
+
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Shop
+            </a>
+            <ul class="dropdownMenu">
+              <li><a class="dropdown-item" href="#">All products</a></li>
+              <li><a class="dropdown-item" href="#">Categories</a></li>
+              <li>
+                <hr class="dropdown-divider">
+              </li>
+              <li><a class="dropdown-item" href="#">Something else here</a></li>
+            </ul>
+          </li>
+
+
+          <li class="nav-item">
+            <a class="nav-link" aria-disabled="true">Deals/Offers</a>
+          </li>
+
+
+          <li class="nav-item">
+            <a class="nav-link" aria-disabled="true">Carts</a>
+          </li>
+
+
+
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Account
+            </a>
+            <ul class="dropdownMenu">
+              <li><a class="dropdown-item" href="#">Categories</a></li>
+              <li>
+                <hr class="dropdown-divider">
+              </li>
+              <li><a class="dropdown-item" href="#">Something else here</a></li>
+            </ul>
+          </li>
+        </ul>
       </div>
     </nav>
   </section>
   <!-- NAVBAR SECTION ENDS HERE -->
+
   <!-- Project -->
   <script src="/ShopMe/style/bootstrap-5.3.3-dist/js/bootstrap.min.js"></script>
   <script src="/ShopMe/scripts/navbarScript.js"></script>
