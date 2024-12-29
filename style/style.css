@@ -1,33 +1,57 @@
+/* importing typeface */
+@font-face {
+	font-family: 'Attena';
+	src: url('/ShopMe/Attena.ttf'), format('truetype');
+}
+
+@font-face {
+	font-family: 'Eywoks';
+	src: url('/ShopMe/Eywoks-nRBXY.ttf'), format('truetype');
+}
+@font-face {
+	font-family: 'Brilliantsignature';
+	src: url('/ShopMe/Brilliantsignature-w11qw.otf'), format('opentype');
+}
+@font-face {
+	font-family: 'QaitanseriffontRegular';
+	src: url('/ShopMe/QaitanseriffontRegular-JRr1o.otf'), format('opentype');
+}
+@font-face {
+	font-family: 'Rinnero';
+	src: url('/ShopMe/Rinnero.otf'), format('opentype');
+}
+
+
+*{
+	margin: 0px;
+	padding: 0px;
+	text-shadow: 0 0.05rem 0.1rem rgba(0, 0, 0, 0.5);
+	box-sizing: border-box;
+}
 body {
 	margin: 0px;
 	padding: 0px;
-	height: 100vh;
-	text-shadow: 0 0.05rem 0.1rem rgba(0, 0, 0, 0.5);
-	box-shadow: inset 0 0 5rem rgba(0, 0, 0, 0.5);
-	box-sizing: border-box;
 }
 
 .jumbotron-slider {
-	margin-top: 5%;
-	/* background: linear-gradient(rgba(0,0,0,0),rgba(0,0,0,0)),url('/ShopMe/images/animations/ea41f6fa6d717bbb4cb360fa0a2259be.mp4');
-	position: relative;
-	background-size: cover;
-	background-position: 100% 100%;
-	background-repeat: no-repeat;
-	height: 100vh !important; */
+	width: 100%;
+	position: relative;	
 	z-index: -1;
 }
 
-.jumbotron-slider video{
+.jumbotron-slider video {
 	width: 100%;
-	height: auto;
+	height: 100vh;
 	object-fit: cover;
+	object-position: center center;
 }
 
-.cover-container{
-	background: rgba(0, 0, 0, 0.897);
+.cover-container {
 	position: absolute;
-	height: 100% !important;
+	background: rgba(0, 0, 0, 0.918);
+	margin-bottom: 30px;
+	box-shadow: inset 0 0 10rem rgba(0, 0, 0, 1);
+	height: 100vh !important;
 }
 
 #nav-parent {
@@ -40,8 +64,13 @@ body {
 	margin-top: 0.5%;
 }
 
-.nav-item a {
+.nav-link {
+	font-size: 14px;
 	color: rgb(189, 181, 181);
+}
+
+.dropdown-menu {
+	background: transparent !important;
 }
 
 /* this is the logo section */
@@ -63,13 +92,14 @@ body {
 	object-fit: cover;
 }
 
-.logo a {
+.logo a  {
 	margin-top: 10px;
 	display: flex;
 	text-decoration: none;
-	text-transform: capitalize;
-	font-family: "Roboto", sans-serif;
-	font-weight: bold;
+	/* text-transform: capitalize; */
+	font-family: "Brilliantsignature", sans-serif;
+	font-size: 24px;
+	font-weight: bolder;
 	opacity: 0.8222;
 }
 
@@ -112,7 +142,7 @@ body {
 	display: flex;
 	align-items: center;
 	position: relative;
-	font-size: 20px;
+	font-size: 16px;
 	color: rgb(189, 181, 181);
 }
 
@@ -121,7 +151,7 @@ body {
 	display: flex;
 	gap: 5px;
 	align-items: center;
-	font-size: 20px;
+	font-size: 16px;
 	color: rgb(189, 181, 181);
 }
 
@@ -139,6 +169,7 @@ body {
 	align-items: center;
 	justify-content: center;
 	font-size: 10px;
+	box-shadow: 0px 0px 5px 1px goldenrod;
 }
 
 .status .notify span p {
@@ -146,12 +177,17 @@ body {
 	font-weight: bold;
 }
 
+.status-profile small {
+	font-size: 12px;
+	color: rgb(189, 181, 181);
+}
+
 .status-profile img {
 	width: 30px;
 	height: 30px;
 	border-radius: 50%;
 	object-fit: fill;
-	box-shadow: 0px 0px 1px 1px goldenrod;
+	box-shadow: 0px 0px 5px 1px goldenrod;
 }
 
 .search-bar-form {
@@ -175,6 +211,15 @@ body {
 	color: #928e8e;
 }
 
+
+
+.hero-img{
+	width: 80%;
+	height: auto;
+	object-fit: cover;
+	border-radius: 5px;
+	box-shadow: 0 0.05rem 0.1rem rgba(29, 29, 29, 0.5);
+}
 /* this is the section for screen orientation designing code */
 
 @media screen and (min-width: 992px) {

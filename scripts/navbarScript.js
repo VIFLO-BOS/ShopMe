@@ -73,21 +73,26 @@ for (let i = 0; i < navLogo.length; i++) {
 // THIS IS THE JUMBOTRON SECTION
 
 const url = [
-    
-    '/images/animations/33bb21e074e40751e2fce2b593be2e19.mp4',
-    '/images/animations/ea41f6fa6d717bbb4cb360fa0a2259be.mp4',
+    // '/ShopMe/images/animations/33bb21e074e40751e2fce2b593be2e19.mp4',
+    '/ShopMe/images/animations/ea41f6fa6d717bbb4cb360fa0a2259be.mp4',
+    '/ShopMe/images/animations/9383f3dc376a03f487abe3c5f945e63d.mp4',
+    '/ShopMe/images/animations/be314a6761d0795919f2b6be86b7cf7c.mp4',
+    '/ShopMe/images/animations/d3e5b1018b878fa8365b612052af5084.mp4',
+    '/ShopMe/images/animations/d210d0cf656cb2a4cb34374c994ebf3a.mp4',
+    '/ShopMe/images/animations/ea41f6fa6d717bbb4cb360fa0a2259be.mp4',
+    '/ShopMe/images/animations/f6c8282ccf611fcba48ec8affda85124.mp4'
 ];
 
-const videoElement = document.querySelector('[data-slide]');
+const videoElement = document.getElementById('data-slide');
 
 const jumbotronSlider = () => {
     let i;
     setInterval(() => {
         i = Math.floor(Math.random() * url.length);
         videoElement.src = `${url[i]}`;  
-        console.log(url[i])
-
-    }, 50000);
+        console.log(url[i]);
+        i = (i + 1) % url.length;
+    }, 12000);
 };
 
 jumbotronSlider();
