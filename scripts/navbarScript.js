@@ -73,29 +73,29 @@ for (let i = 0; i < navLogo.length; i++) {
 // THIS IS THE JUMBOTRON SECTION
 
 const url = [
-    // '/ShopMe/images/animations/33bb21e074e40751e2fce2b593be2e19.mp4',
-    '/ShopMe/images/animations/ea41f6fa6d717bbb4cb360fa0a2259be.mp4',
-    '/ShopMe/images/animations/9383f3dc376a03f487abe3c5f945e63d.mp4',
-    '/ShopMe/images/animations/be314a6761d0795919f2b6be86b7cf7c.mp4',
-    '/ShopMe/images/animations/d3e5b1018b878fa8365b612052af5084.mp4',
-    '/ShopMe/images/animations/d210d0cf656cb2a4cb34374c994ebf3a.mp4',
-    '/ShopMe/images/animations/ea41f6fa6d717bbb4cb360fa0a2259be.mp4',
-    '/ShopMe/images/animations/f6c8282ccf611fcba48ec8affda85124.mp4'
+    '/ShopMe/images/bags/aniBag1.jpeg',
+    '/ShopMe/images/bags/anibag2.jpeg',
+    '/ShopMe/images/bags/anibag3.jpeg',
+    '/ShopMe/images/bags/anibag4.jpeg',
+    '/ShopMe/images/bags/anibag5.jpeg',
+    '/ShopMe/images/bags/aniBag6.jpeg',
 ];
 
-const videoElement = document.getElementById('data-slide');
+const aniBackEl = document.querySelector('.parent-cont');
+console.log(aniBackEl);
 
-const jumbotronSlider = () => {
-    let i;
+const aniBack = () => {
     setInterval(() => {
-        i = Math.floor(Math.random() * url.length);
-        videoElement.src = `${url[i]}`;  
-        console.log(url[i]);
-        i = (i + 1) % url.length;
-    }, 12000);
+        const i = Math.floor(Math.random() * url.length);
+        aniBackEl.style.backgroundImage = `linear-gradient(rgba(0, 0, 0, 0.915), rgba(0, 0, 0, 0.967)), url(${url[i]})`;
+        console.log(url[i]); // Logs the selected image path
+    }, 50000); // 5-second interval
 };
 
-jumbotronSlider();
+aniBack();
+
+
+
 
 
 

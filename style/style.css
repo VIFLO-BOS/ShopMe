@@ -1,39 +1,109 @@
 /* importing typeface */
 @font-face {
-	font-family: 'Attena';
-	src: url('/ShopMe/Attena.ttf'), format('truetype');
+	font-family: "Attena";
+	src: url("/ShopMe/Attena.ttf"), format("truetype");
 }
 
 @font-face {
-	font-family: 'Eywoks';
-	src: url('/ShopMe/Eywoks-nRBXY.ttf'), format('truetype');
+	font-family: "Eywoks";
+	src: url("/ShopMe/Eywoks-nRBXY.ttf"), format("truetype");
 }
 @font-face {
-	font-family: 'Brilliantsignature';
-	src: url('/ShopMe/Brilliantsignature-w11qw.otf'), format('opentype');
+	font-family: "Brilliantsignature";
+	src: url("/ShopMe/Brilliantsignature-w11qw.otf"), format("opentype");
 }
 @font-face {
-	font-family: 'QaitanseriffontRegular';
-	src: url('/ShopMe/QaitanseriffontRegular-JRr1o.otf'), format('opentype');
+	font-family: "QaitanseriffontRegular";
+	src: url("/ShopMe/QaitanseriffontRegular-JRr1o.otf"), format("opentype");
 }
 @font-face {
-	font-family: 'Rinnero';
-	src: url('/ShopMe/Rinnero.otf'), format('opentype');
+	font-family: "Rinnero";
+	src: url("/ShopMe/Rinnero.otf"), format("opentype");
 }
 
-
-*{
+* {
 	margin: 0px;
 	padding: 0px;
+	color: white;
 	text-shadow: 0 0.05rem 0.1rem rgba(0, 0, 0, 0.5);
 	box-sizing: border-box;
 }
 body {
-	margin: 0px;
-	padding: 0px;
+	background: linear-gradient(rgba(0, 0, 0, 0.815), rgba(0, 0, 0, 0.767)),
+		url("/ShopMe/images/other/1ebd8aa0014b23677b5ba58de656b883.jpg") center
+			center;
+	background-size: cover;
+	background-repeat: no-repeat;
+	animation: backgroundMove 50s ease-in-out infinite; /* Looping animation */
 }
 
-.jumbotron-slider {
+@keyframes backgroundMove {
+	0% {
+		background-position: 50% 50%; /* Center */
+	}
+	5% {
+		background-position: 50% 40%; /* Move slightly up */
+	}
+	10% {
+		background-position: 60% 30%; /* Top-right */
+	}
+	15% {
+		background-position: 70% 40%; /* Shift slightly down */
+	}
+	20% {
+		background-position: 80% 50%; /* Right-center */
+	}
+	25% {
+		background-position: 70% 60%; /* Bottom-right */
+	}
+	30% {
+		background-position: 60% 70%; /* Shift slightly left */
+	}
+	35% {
+		background-position: 50% 80%; /* Bottom-center */
+	}
+	40% {
+		background-position: 40% 70%; /* Bottom-left */
+	}
+	45% {
+		background-position: 30% 60%; /* Shift slightly up */
+	}
+	50% {
+		background-position: 20% 50%; /* Left-center */
+	}
+	55% {
+		background-position: 30% 40%; /* Top-left */
+	}
+	60% {
+		background-position: 40% 30%; /* Shift slightly right */
+	}
+	65% {
+		background-position: 50% 20%; /* Top-center */
+	}
+	70% {
+		background-position: 60% 30%; /* Top-right */
+	}
+	75% {
+		background-position: 70% 40%; /* Slightly down */
+	}
+	80% {
+		background-position: 80% 50%; /* Right-center */
+	}
+	85% {
+		background-position: 70% 60%; /* Bottom-right */
+	}
+	90% {
+		background-position: 60% 70%; /* Shift left */
+	}
+	95% {
+		background-position: 50% 80%; /* Bottom-center */
+	}
+	100% {
+		background-position: 50% 50%; /* Reset to center */
+	}
+}
+
+/* .jumbotron-slider {
 	width: 100%;
 	position: relative;	
 	z-index: -1;
@@ -52,7 +122,7 @@ body {
 	margin-bottom: 30px;
 	box-shadow: inset 0 0 10rem rgba(0, 0, 0, 1);
 	height: 100vh !important;
-}
+} */
 
 #nav-parent {
 	background: transparent;
@@ -92,7 +162,7 @@ body {
 	object-fit: cover;
 }
 
-.logo a  {
+.logo a {
 	margin-top: 10px;
 	display: flex;
 	text-decoration: none;
@@ -100,7 +170,6 @@ body {
 	font-family: "Brilliantsignature", sans-serif;
 	font-size: 24px;
 	font-weight: bolder;
-	opacity: 0.8222;
 }
 
 #navbar-btn {
@@ -211,17 +280,111 @@ body {
 	color: #928e8e;
 }
 
-
-
-.hero-img{
-	width: 80%;
+.hero-img {
+	width: 100%;
 	height: auto;
 	object-fit: cover;
 	border-radius: 5px;
 	box-shadow: 0 0.05rem 0.1rem rgba(29, 29, 29, 0.5);
 }
-/* this is the section for screen orientation designing code */
 
+.product-card-img {
+	position: relative;
+}
+.product-card-img img {
+	width: 100%;
+	height: 225px;
+	object-fit: fill;
+	object-position: center center;
+}
+.product-badge-custom {
+	width: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.product-badge-custom div:nth-child(1) {
+	padding: 5px 10px;
+	font-family: "Roboto", sans-serif;
+	font-size: 0.8rem;
+	font-weight: light !important;
+	background-color: #ff5722;
+	color: #fff;
+	border-radius: 2px;
+}
+
+.product-badge-custom div:nth-child(1) i {
+	color: rgb(3, 196, 3);
+}
+
+.product-badge-custom div:nth-child(2) img {
+	margin-top: 10px;
+	padding: 1px 1px;
+	width: 50px;
+	height: 50px;
+	border-radius: 100%;
+	object-fit: cover;
+	object-position: center center;
+	box-shadow: 0px 2px 5px 1px #000;
+}
+
+#card-detail {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+.card-title {
+	color: #4d4b4b;
+	font-size: 1rem;
+}
+.card-title i {
+	color: #ff5722;
+	font-size: 8px;
+}
+
+.card-price {
+	font-size: 0.8rem;
+	font-weight: 400;
+	color: rgb(0, 145, 0);
+}
+
+.fa-check {
+	color: rgba(0, 145, 0);
+}
+.old-price {
+	font-size: 0.8rem;
+	font-weight: 400;
+	color: #868686;
+	text-decoration: line-through;
+}
+
+.card-body .btn-danger,
+.card-body .btn-primary {
+	font-size: 10px;
+}
+
+.btn-danger:hover,
+.btn-primary:hover {
+	transition: all 0.5s ease-in-out;
+	transform: scale(1.0534);
+}
+
+.rating small:nth-child(1) {
+	font-size: 12px;
+	color: #ff5722;
+}
+.rating small:nth-child(2),
+.rating small:nth-child(2) i {
+	font-size: 12px;
+	color: #707070;
+}
+
+/* this is the section for screen orientation designing code */
 @media screen and (min-width: 992px) {
 	#navbar-btn {
 		display: none;
