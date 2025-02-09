@@ -1,0 +1,63 @@
+.left-sider,
+.center-sider,
+.right-sider {
+    border: none;
+    border-radius: 5px;
+    box-shadow: 0 0px 4px 1px rgb(0, 0, 0, .12);
+    height: 70vh;
+    background: #fff;
+}
+
+.left-sider .sider-title {
+    margin-bottom: 0px !important;
+    padding-bottom: 0px !important;
+}
+
+.left-sider .sider-subtitle {
+    padding-left: 8px;
+    font-size: 10px;
+    color: #3f3f3f;
+}
+
+.left-sider .few-categories ul {
+    padding: 5px;
+    text-decoration: none;
+    list-style: none;
+}
+
+.left-sider .few-categories ul li {
+    margin-right: 5px;
+    padding-top: 5px;
+    padding-left: 5px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 12px;
+    text-align: left;
+    border-bottom: 0.5px solid #3f3f3f10;
+    border-radius: 1px;
+    cursor: pointer;
+}
+
+.left-sider .few-categories ul li:hover {
+    box-shadow: 1.5px 1.5px 2px 0px rgba(0, 0, 0, 0.233);
+}
+
+.right-sider {
+    box-shadow: none !important;
+}
+
+.right-sider .new-arrival,
+.offer-promotion,
+.ads {
+    display: flex;
+    box-shadow: 0 0px 4px 1px rgb(0, 0, 0, .12);
+}
+
+.center-sider .product-ads {
+    width: 100%;
+    height: 70vh;
+    border-radius: 5px;
+    object-fit: fill;
+    box-shadow: 0px 0px 3px 0px #00000062;
+    transition: opacity 0.8s ease-in-out;
+    /* Smooth fade transition */
+}

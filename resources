@@ -1,0 +1,33 @@
+
+
+<!-- <section class="hero-ctn">
+    <div class="container">
+        <div class="row align-items-center flex-lg-row-reverse">
+            <div class="col-lg-6 col-md-6 col-sm-12">
+                <img src="/ShopMe/images/bags/anibag3-removebg-preview.png" class="img hero-img" alt="images"
+                    loading="lazy" />
+            </div>
+
+            <div class="col-lg-6 col-md-6 col-sm-12">
+                <h1 class="display-3 fw-bold lh-1 mb-3 text-start text-center text-sm-start" id="hero-title">
+                    Bags <br />
+                    offering <br />convenience, <br />
+                    style, quality.
+                </h1>
+                <p class="text-start text-center text-md-start">
+                    "Explore stylish, functional, and
+                    premium-quality bags designed for every moment
+                    in life.
+                </p>
+                <div class="d-grid gap-2 d-md-flex justify-content-md-start">
+                    <button type="button" class="btn btn-primary btn-md px-4 me-md-2 exploreNow">
+                        Explore Now
+                    </button>
+                    <button type="button" class="btn btn-outline-warning btn-md px-4 discoverThrend">
+                        Discover Trends
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</section> -->
