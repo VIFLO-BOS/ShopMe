@@ -1,0 +1,68 @@
+.footer-logo {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	gap: 5px;
+}
+
+/* .checkbox-ctn{
+	width: 100%;
+display: flex;
+align-items: center;
+gap: 5px;
+} */
+
+.checkbox-ctn input{
+	margin:0px;
+	padding: -40px;
+}
+
+.checkbox-ctn .checkbox-label{
+	padding-top: 15px;
+	font-size: 12px;
+}
+
+.checkbox-term{
+	text-decoration: none;
+	font-size: 12px;
+}
+
+/* .footer-logo .img-ctn {
+	display: flex;
+} */
+
+.footer-logo .img-ctn img:nth-child(1) {
+	margin: 0px;
+	width: 140px;
+	height: auto;
+	object-fit: cover;
+}
+
+.footer-logo .img-ctn img:nth-child(2) {
+	padding: 3px;
+	width: 35px;
+	height: auto;
+	object-fit: cover;
+	border: 2px solid #fc8600;
+	border-radius: 50%;
+}
+
+.img-ctn p {
+	font-size: 12px;
+}
+.first-footer-li,
+.footer-logo .img-ctn p {
+	color: rgb(179, 179, 179);
+}
+
+.payment img {
+	width: 50px;
+	height: 30px;
+	object-fit: contain;
+	box-shadow: 0px 0px 3px 0px #66666665;
+	border-radius: 2px;
+}
+
+.joinUs i {
+	font-size: 36px;
+}
