@@ -17,7 +17,7 @@ document.addEventListener("DOMContentLoaded", () => {
 	if (!marquee) return; // Prevent errors if element is missing
 
 	let position = window.innerWidth; // Start from right
-	let speed = 1.5;
+	let speed = 1;
 	let isPause = false;
 
 	function moveMarquee() {
@@ -167,7 +167,7 @@ document.addEventListener("mouseover", (event) => {
 	}
 });
 
-//this is to change the navbar log color
+//this is to change the navbar logo color
 const navLogo = document.querySelectorAll(".nav-logo");
 for (let i = 0; i < navLogo.length; i++) {
 	if (i % 2 === 0) {

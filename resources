@@ -44,15 +44,44 @@
 
 
 
+<!-- COOKIES -->
+
+Privacy & cookie policy
+We use cookies and similar technologies to provide our Service, to give you the best experience, to improve and
+advertise the Service, to ensure it is safe and secure for users, and to measure the effectiveness of advertising
+campaigns. If you select ‘Accept All’, you agree to us and the partners we work with storing cookies and similar
+technologies on your device for advertising purposes. You can also ‘Reject All’ non-essential cookies or choose which
+types of cookies you'd like to accept or disable by clicking ‘Customise Cookies’ below or at any time in your privacy
+settings. For more details, see our Cookies and Similar Technologies Policy.
+
+Customize cookies AcceptAll RejectAll
 
 
 
 
 
-
-
-
-
+<nav class="col-lg-8">
+                                <ul class="modal-body row p-2  w-100 modalUl">
+                                    <li class="col-12 col-md-4 mx-auto  "><a href="#"> Bitchox Clu Bag </a>
+                                    </li>
+                                    <li class="col-12 col-md-4 mx-auto  "><a href="#"> Doctor Bag </a></li>
+                                    <li class="col-12 col-md-4 mx-auto  "><a href="#"> Backpack Bag </a>
+                                    </li>
+                                    <li class="col-12 col-md-4 mx-auto  "><a href="#"> Duffel Bag </a></li>
+                                    <li class="col-12 col-md-4 mx-auto  "><a href="#">Gym Bag </a></li>
+                                    <li class="col-12 col-md-4 mx-auto  "><a href="#">Laptop Bag </a></li>
+                                    <li class="col-12 col-md-4 mx-auto  "><a href="#"> Diaper Bag </a></li>
+                                    <li class="col-12 col-md-4 mx-auto  "><a href="#"> Travel Bag</a></li>
+                                    <li class="col-12 col-md-4 mx-auto  "><a href="#">Antistatic Bag </a>
+                                    </li>
+                                    <li class="col-12 col-md-4 mx-auto  "><a href="#"> Bindle Bag</a></li>
+                                    <li class="col-12 col-md-4 mx-auto  "><a href="#"> Pouch Bag</a></li>
+                                    <li class="col-12 col-md-4 mx-auto  "><a href="#"> Bowling Bag </a></li>
+                                    <li class="col-12 col-md-4 mx-auto  "><a href="#"> Saddle Bag </a></li>
+                                    <li class="col-12 col-md-4 mx-auto  "><a href="#"> CanteenBag </a></li>
+                                    <li class="col-12 col-md-4 mx-auto  "><a href="#"> Frame Bag </a></li>
+                                </ul>
+                            </nav>
 
 
 

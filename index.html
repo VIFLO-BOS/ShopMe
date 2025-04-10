@@ -7,8 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="shortcut icon" href="/ShopMe/images/logo/favicon.ico" type="image/x-icon" />
     <!-- Custom Styles -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet">
     <!--Tab to edit-->
     <link rel="stylesheet" href="/ShopMe/style/bootstrap-5.3.3-dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="/ShopMe/fontawesome-free-6.7.2-web/css/all.min.css" />
@@ -22,7 +21,7 @@
 
     <!-- THIS IS THE NAVBAR SECTION -->
     <section class="mb-1 ">
-        <nav class="navbar navbar-expand-lg fixed-top mb-5 px-3" id="nav-parent">
+        <nav class="navbar navbar-expand-lg fixed-top mb-5 p-3" id="nav-parent">
             <div class="container" id="sub-nav">
                 <div class="logo navbar-brand float-start">
                     <div>
@@ -53,19 +52,18 @@
                 <div class="navbar-nav" id="navbar-content">
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                         <li class="nav-item">
-                            <a class="nav-link" href="#">
+                            <a class="nav-link active" href="#">
                                 <!-- <i class="fa-sharp fa-solid fa-house-chimney-window"></i> -->
                                 Home
                             </a>
                         </li>
 
                         <li class="nav-item dropdown w-100">
-                            <a class="nav-link dropdown-toggle" href="#" role="button" id="shop-btn"
-                                aria-expanded="false">
+                            <a class="nav-link" href="#" role="button" id="shop-btn" aria-expanded="false">
                                 <!-- <i class="fa-brands fa-shopify"></i> -->
                                 Shop
                             </a>
-                            <ul class="dropdown-menu" id="shop-menu">
+                            <ul class="dropdown-menu position-absolute" id="shop-menu">
                                 <li>
                                     <a class="dropdown-item" href="/ShopMe/pages/">All products</a>
                                 </li>
@@ -73,7 +71,7 @@
                                     <hr class="dropdown-divider" />
                                 </li>
                                 <li>
-                                    <a class="nav-link dropdown-toggle" id="categories-btn" href="#">Categories</a>
+                                    <a class="dropdown-item" id="categories-btn" href="#">Categories</a>
                                 </li>
 
                         </li>
@@ -96,23 +94,19 @@
                     </li>
 
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" role="button" id="acc-btn" aria-expanded="false">
+                        <a class="nav-link " href="#" role="button" id="acc-btn" aria-expanded="false">
                             <!-- <i class="fa-solid fa-power-off"></i> -->
                             Account
                         </a>
                         <ul class="dropdown-menu align-item-center" id="acc-menu">
-                            <li>
-                                <button type="button" class="btn  btn-md nav-item border-0">
-                                    <a class="nav-link" href="#"> Sign In</a>
-                                </button>
+                            <li class="nav-item border-0">
+                                <a class="dropdown-item" href="#"> Sign In</a>
                             </li>
                             <li>
                                 <hr class="dropdown-divider" />
                             </li>
-                            <li>
-                                <button type="button" class="btn  btn-md nav-item border-0">
-                                    <a class="nav-link" href="#">Sign Up</a>
-                                </button>
+                            <li class="nav-item border-0">
+                                <a class="dropdown-item" href="#">Sign Up</a>
                             </li>
                         </ul>
                     </li>
@@ -153,42 +147,20 @@
         </nav>
 
         <!-- This the navbar setting for small screen -->
-        <div class="position-absolute hidden py-3 mt-3 mt-md-3" tabindex="-1" role="dialog"
+        <div class="position-absolute bg-body-tertiary hidden p-1 mt-3 mt-md-3 w-50 float-end rounded-1"
             id="modaDrop-cont">
-            <div class="modal-header float-end  px-5 pb-4 border-bottom-0">
-                <button type="button" class="btn  btn-close " id="closeModaDrop-cont" data-bs-dismiss="modal"
-                    aria-label="Close"></button>
-            </div>
-
-            <div class="h-100 float-end" >
-                <ul class="dropdown-menu position-static d-grid gap-1 p-2  mx-0 border-0 navSmall" >
+            <div class="h-100 mt-5">
+                <!-- <div class="modal-header  px-3 py-3 pb-4 border-bottom-0">
+                    <button type="button" class="btn mt-5 mt-md-3  btn-close" id="closeModaDrop-cont" data-bs-dismiss="modal"
+                        aria-label="Close"></button>
+                </div> -->
+                <ul class="dropdown-menu position-static d-grid gap-1 p-2  mx-0 border-0 w-100 navSmall">
                     <li><a class="dropdown-item active" href="#">Home</a></li>
                     <li>
-                        <a class="dropdown-item dropdown-toggle" id="dropShopMenuContainerToggler" ref="#">Shop</a>
-                        <div class="dropdown-menu position-static  flex-column flex-lg-row align-items-stretch justify-content-start mt-3 mt-md-3 p-3  hidden "
+                        <a class="dropdown-item " id="dropShopMenuContainerToggler" ref="#">Shop</a>
+                        <div class="dropdown-menu position-static flex-column flex-lg-row align-items-stretch justify-content-start mt-3 mt-md-3 p-3  hidden"
                             data-bs-theme="light" id="dropShopMenuContainer">
-                            <nav class="col-lg-8">
-                                <ul class="modal-body row p-2  w-100 modalUl">
-                                    <li class="col-12 col-md-4 mx-auto  "><a href="#"> Bitchox Clu Bag </a>
-                                    </li>
-                                    <li class="col-12 col-md-4 mx-auto  "><a href="#"> Doctor Bag </a></li>
-                                    <li class="col-12 col-md-4 mx-auto  "><a href="#"> Backpack Bag </a>
-                                    </li>
-                                    <li class="col-12 col-md-4 mx-auto  "><a href="#"> Duffel Bag </a></li>
-                                    <li class="col-12 col-md-4 mx-auto  "><a href="#">Gym Bag </a></li>
-                                    <li class="col-12 col-md-4 mx-auto  "><a href="#">Laptop Bag </a></li>
-                                    <li class="col-12 col-md-4 mx-auto  "><a href="#"> Diaper Bag </a></li>
-                                    <li class="col-12 col-md-4 mx-auto  "><a href="#"> Travel Bag</a></li>
-                                    <li class="col-12 col-md-4 mx-auto  "><a href="#">Antistatic Bag </a>
-                                    </li>
-                                    <li class="col-12 col-md-4 mx-auto  "><a href="#"> Bindle Bag</a></li>
-                                    <li class="col-12 col-md-4 mx-auto  "><a href="#"> Pouch Bag</a></li>
-                                    <li class="col-12 col-md-4 mx-auto  "><a href="#"> Bowling Bag </a></li>
-                                    <li class="col-12 col-md-4 mx-auto  "><a href="#"> Saddle Bag </a></li>
-                                    <li class="col-12 col-md-4 mx-auto  "><a href="#"> CanteenBag </a></li>
-                                    <li class="col-12 col-md-4 mx-auto  "><a href="#"> Frame Bag </a></li>
-                                </ul>
-                            </nav>
+
 
                         </div>
 
@@ -199,11 +171,13 @@
                 </ul>
 
 
-                <div class="d-flex  p-2  gap-2 align-items-center justify-content-between ">
+                <div class="d-flex  px-3 pt-3  gap-2 align-items-center justify-content-between ">
                     <div>
-                        <button type="button" class="btn btn-outline-secondary  "> <a href="#" class="nav-link" >Sign In</a></button>
+                        <button type="button" class="btn btn-sm btn-outline-warning fs-6"> <a href="#" class="dropdown-item" >Sign
+                                In</a></button>
                     </div>
-                    <div><button type="button" class="btn btn-outline-primary  " > <a href="#" class="nav-link" >Sign Up</a></button>
+                    <div><button type="button" class="btn btn-sm btn-outline-primary "> <a href="#" class="dropdown-item" >Sign
+                                Up</a></button>
                     </div>
                 </div>
 
@@ -329,9 +303,9 @@
             <!-- feature hero section -->
             <div class="card-header container px-3 ">
                 <div class="card-title">
-                    <h4 class="text-body-tertiary">Categories</h4>
+                    <h4 class="text-body-tertiary">write a title here</h4>
                 </div>
-                <div class="marquee-ctn">
+                <div class="marquee-ctn py-2">
                     <p class="mar-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio deleniti,
                         quaerat aliquid officiis veritatis placeat impedit animi porro mollitia saepe?</p>
                 </div>
@@ -2805,7 +2779,6 @@
 
             <!-- FEATURE CARD SECTION -->
             <section class="p-2 container ">
-
                 <div class="album py-2">
                     <div class="container">
                         <!-- <div class="feature-header d-flex align-items-center justify-content-between">
@@ -3511,16 +3484,349 @@
                         </div>
 
                     </div>
-
             </section>
-
-
-
-
         </main>
     </section>
     <!-- this feature section ends here -->
 
+    <!-- this is the deal and offer sections -->
+    <section>
+        <div class="container py-5 my-5">
+            <div class="text-center mb-4">
+                <h1 class="text-danger">Hot Deals & Offers 🔥</h1>
+                <p class="text-muted">Grab these amazing deals before they're gone!</p>
+            </div>
+
+            <div class="row  g-3">
+
+
+                <!-- Deal Card 1 -->
+                <div class="col-6 col-md-3 mx-auto position-relative">
+                    <div class="card deal-card h-100">
+                        <img src="./images/bags/Official Website & Store.jpeg" class="card-img-center bg-body-tertiary"
+                            alt="Product Image">
+                        <div class="card-body text-center">
+                            <h5 class="card-title">Wireless Headphones</h5>
+                            <div class="price mb-2">
+                                <span class="original">$99.99</span>
+                                <span class="discounted">$49.99</span>
+                            </div>
+                            <div class="countdown d-flex justify-content-center">
+                                <p>Offer ends in:</p> <span>12:00:00</span>
+                            </div>
+                            <a href="#" class="btn btn-danger mb-2">Shop Now</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Deal Card 2 -->
+                <div class="col-6 col-md-3 mx-auto">
+                    <div class="card deal-card h-100">
+                        <img src="/ShopMe/images/bags/6a65b0b6-0806-47df-8905-50956afc94c2.jpeg " class="card-img-top"
+                            alt="Product Image">
+                        <div class="card-body text-center">
+                            <h5 class="card-title">Wireless Headphones</h5>
+                            <div class="price mb-2">
+                                <span class="original">$99.99</span>
+                                <span class="discounted">$49.99</span>
+                            </div>
+                            <div class="countdown d-flex justify-content-center">
+                                <p>Offer ends in:</p> <span>12:00:00</span>
+                            </div>
+                            <a href="#" class="btn btn-danger mb-2">Shop Now</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Deal Card 3 -->
+                <div class="col-6 col-md-3 mx-auto">
+                    <div class="card deal-card h-100">
+                        <img src="/ShopMe/images/other/1.png" class="card-img-top" alt="Product Image">
+                        <div class="card-body text-center">
+                            <h5 class="card-title">Wireless Headphones</h5>
+                            <div class="price mb-2">
+                                <span class="original">$99.99</span>
+                                <span class="discounted">$49.99</span>
+                            </div>
+                            <div class="countdown d-flex justify-content-center">
+                                <p>Offer ends in:</p> <span>12:00:00</span>
+                            </div>
+                            <a href="#" class="btn btn-danger mb-2">Shop Now</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Deal Card 4 -->
+                <div class="col-6 col-md-3 mx-auto">
+                    <div class="card deal-card h-100">
+                        <img src="/ShopMe/images/other/1.png" class="card-img-top" alt="Product Image">
+                        <div class="card-body text-center">
+                            <h5 class="card-title">Wireless Headphones</h5>
+                            <div class="price mb-2">
+                                <span class="original">$99.99</span>
+                                <span class="discounted">$49.99</span>
+                            </div>
+                            <div class="countdown d-flex justify-content-center">
+                                <p>Offer ends in:</p> <span>12:00:00</span>
+                            </div>
+                            <a href="#" class="btn btn-danger mb-2">Shop Now</a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+    <!-- this is the testimony sections -->
+    <section class="container-fluid bg-body-tertiary py-5 my-5">
+        <div class="container rounded-1">
+            <div class="text-center mb-4">
+                <h1 class="text-danger">Customer Testimonials</h1>
+                <p class="text-muted">Showcasing positive reviews from our satisfied customers</p>
+            </div>
+
+            <div id="testimonialCarousel" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                    <!-- Review 1 -->
+                    <div class="carousel-ite active">
+                        <div class="card  px-2">
+                            <div class="card-body d-flex align-item-center gap-3 flex-wrap">
+                                <div class="card-body d-flex align-items-center  text-md-start text-center gap-4">
+                                    <div>
+                                        <img class="testimonialCarousel-img" src="images/profile/chineseman.jpeg"
+                                            alt="">
+                                    </div>
+
+                                    <div class="card-profile-detail">
+                                        <div><span><strong>Name:</strong></span> <span>John Doe</span></div>
+                                        <div><span><strong>Profession:</strong></span> <span>Software Developer</span>
+                                        </div>
+                                        <div><span><strong>Location:</strong></span> <span>Lagos, Nigeria.</span></div>
+                                    </div>
+                                </div>
+                                <div class="card-body-rating text-md-start text-center">
+                                    <p class="star-rating mb-2"><strong>Rating:</strong> ⭐⭐⭐⭐⭐</p>
+                                    <p class="card-text mx-auto"><strong>Testimony:</strong> Lorem ipsum dolor sit amet
+                                        consectetur adipisicing elit. Id voluptates quaerat praesentium et doloribus
+                                        voluptatem suscipit, sed eos, laborum, reprehenderit incidunt? Necessitatibus at
+                                        sunt officiis accusantium voluptate eos distinctio! Similique.</p>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Review 2 -->
+                    <div class="carousel-item ">
+                        <div class="card  px-2">
+                            <div class="card-body d-flex align-item-center gap-3 flex-wrap">
+                                <div class="card-body d-flex align-items-center text-md-start text-center gap-4">
+                                    <div>
+                                        <img class="testimonialCarousel-img" src="images/profile/chineseman.jpeg"
+                                            alt="">
+                                    </div>
+
+                                    <div class="card-profile-detail">
+                                        <div><span><strong>Name:</strong></span> <span>John Doe</span></div>
+                                        <div><span><strong>Profession:</strong></span> <span>Software Developer</span>
+                                        </div>
+                                        <div><span><strong>Location:</strong></span> <span>Lagos, Nigeria.</span></div>
+                                    </div>
+                                </div>
+                                <div class="card-body-rating text-md-start text-center">
+                                    <p class="star-rating mb-2"><strong>Rating:</strong> ⭐⭐⭐⭐⭐</p>
+                                    <p class="card-text mx-auto"><strong>Testimony:</strong> Lorem ipsum dolor sit amet
+                                        consectetur adipisicing elit. Id voluptates quaerat praesentium et doloribus
+                                        voluptatem suscipit, sed eos, laborum, reprehenderit incidunt? Necessitatibus at
+                                        sunt officiis accusantium voluptate eos distinctio! Similique.</p>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Review 3 -->
+                    <div class="carousel-item ">
+                        <div class="card  px-2">
+                            <div class="card-body d-flex align-item-center gap-3 flex-wrap">
+                                <div class="card-body d-flex align-items-center  text-md-start text-center gap-4">
+                                    <div>
+                                        <img class="testimonialCarousel-img" src="images/profile/chineseman.jpeg"
+                                            alt="">
+                                    </div>
+
+                                    <div class="card-profile-detail">
+                                        <div><span><strong>Name:</strong></span> <span>John Doe</span></div>
+                                        <div><span><strong>Profession:</strong></span> <span>Software Developer</span>
+                                        </div>
+                                        <div><span><strong>Location:</strong></span> <span>Lagos, Nigeria.</span></div>
+                                    </div>
+                                </div>
+                                <div class="card-body-rating text-md-start text-center">
+                                    <p class="star-rating mb-2"><strong>Rating:</strong> ⭐⭐⭐⭐⭐</p>
+                                    <p class="card-text mx-auto"><strong>Testimony:</strong> Lorem ipsum dolor sit amet
+                                        consectetur adipisicing elit. Id voluptates quaerat praesentium et doloribus
+                                        voluptatem suscipit, sed eos, laborum, reprehenderit incidunt? Necessitatibus at
+                                        sunt officiis accusantium voluptate eos distinctio! Similique.</p>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Review 4 -->
+                    <div class="carousel-item">
+                        <div class="card  px-2">
+                            <div class="card-body d-flex align-item-center gap-3 flex-wrap">
+                                <div class="card-body d-flex align-items-center text-md-start text-center gap-4 ">
+                                    <div>
+                                        <img class="testimonialCarousel-img" src="images/profile/chineseman.jpeg"
+                                            alt="">
+                                    </div>
+
+                                    <div class="card-profile-detail">
+                                        <div><span><strong>Name:</strong></span> <span>John Doe</span></div>
+                                        <div><span><strong>Profession:</strong></span> <span>Software Developer</span>
+                                        </div>
+                                        <div><span><strong>Location:</strong></span> <span>Lagos, Nigeria.</span></div>
+                                    </div>
+                                </div>
+                                <div class="card-body-rating text-md-start text-center">
+                                    <p class="star-rating mb-2"><strong>Rating:</strong> ⭐⭐⭐⭐⭐</p>
+                                    <p class="card-text mx-auto"><strong>Testimony:</strong> Lorem ipsum dolor sit amet
+                                        consectetur adipisicing elit. Id voluptates quaerat praesentium et doloribus
+                                        voluptatem suscipit, sed eos, laborum, reprehenderit incidunt? Necessitatibus at
+                                        sunt officiis accusantium voluptate eos distinctio! Similique.</p>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Carousel Controls -->
+                <button class="carousel-control-prev" type="button" data-bs-target="#testimonialCarousel"
+                    data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+
+                <button class="carousel-control-next" type="button" data-bs-target="#testimonialCarousel"
+                    data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+
+            <div class="text-center mt-4">
+                <button class="btn btn-primary">Write a Review</button>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- this is the privacy and policy sections -->
+    <section class="container-fluid bg-body-tertiary">
+        <div class="container-fluid py-4">
+            <div class="px-2 my-5 mb-4 bg-dark text-white rounded-1">
+                <div class="container-fluid row py-5">
+                    <div class="col-12 col-md-6 mb-3">
+                        <h1 class="display-5 fw-bold">Privacy & Policy</h1>
+                        <p class="col-md-8 fs-6">Welcome to Shopme, your privacy is important to us. This privacy
+                            explains
+                            how we collect, use and protect your personal informations</p>
+                    </div>
+
+                    <div class="col-12 col-md-6 bg-white py-3 rounded-3">
+                        <div class="h-100 text-dark rounded-3">
+                            <h4>Information We Collect</h4>
+                            <ul>
+                                <li><strong>Personal Information:</strong> Name, email address, phone number, etc.</li>
+                                <li><strong>Payment Information:</strong> Credit/debit card details for purchases.</li>
+                                <li><strong>Browsing Data:</strong> IP address, device type, cookies, etc.</li>
+                            </ul>
+
+                        </div>
+
+
+                    </div>
+
+                </div>
+            </div>
+
+            <div>
+
+                <div>
+                    <div class="h-100 p-5 ">
+                        <div>
+                            <h6>How We Use Your Information</h6>
+                            <p>We use the information collected for the following purposes:</p>
+                            <ul>
+                                <li>To provide and improve our services.</li>
+                                <li>To process transactions and send order updates.</li>
+                                <li>To personalize your shopping experience.</li>
+                                <li>For security and fraud prevention.</li>
+                            </ul>
+                        </div>
+
+                        <div>
+                            <h6>Data Protection and Security</h6>
+                            <p>We take appropriate measures to protect your personal information from unauthorized
+                                access,
+                                alteration, and
+                                disclosure.</p>
+                        </div>
+
+
+                        <div>
+                            <h6>Cookies and Tracking Technologies</h6>
+                            <p>We use cookies to improve your experience on our website. You can manage cookie
+                                preferences in your
+                                browser
+                                settings.</p>
+                        </div>
+
+
+                        <div>
+                            <h6>Third-Party Services</h6>
+                            <p>We may share your data with third-party partners for services like payment processing and
+                                analytics.
+                                We
+                                ensure they comply with privacy regulations.</p>
+                        </div>
+
+                        <div>
+                            <h6>Your Rights</h6>
+                            <p>You have the right to:</p>
+                            <ul>
+                                <li>Request access to your personal data.</li>
+                                <li>Opt out of marketing communications.</li>
+                                <li>Request data deletion (subject to legal limitations).</li>
+                            </ul>
+                        </div>
+
+                        <div>
+                            <h6>Policy Updates</h6>
+                            <p>We may update this Privacy Policy from time to time. Changes will be posted on this page.
+                            </p>
+                        </div>
+
+                        <div>
+                            <h6>Contact Us</h6>
+                            <p>If you have any questions about this policy, please contact us at
+                                <strong>shopmedesk@gmail.com</strong>.
+                            </p>
+                        </div>
+
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
     <!-- Footer Section-->
     <section class="bg-body-tertiary">
